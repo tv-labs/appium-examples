@@ -128,4 +128,4 @@ await driver.executeScript('webos: pressKey', [{ key: 'down' }]);
 
 ## License
 
-ISC
+Apache-2.0
