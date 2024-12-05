@@ -11,7 +11,7 @@ const wdOpts = {
   capabilities: {
     platformName: 'Mac',
     'appium:automationName': 'safari',
-    "tvlabs:filter": "X"
+    'tvlabs:filter': 'X',
     // "tvlabs:filter": pickRandom(['X', 'Y', 'Z']),
   },
 };
@@ -20,7 +20,7 @@ async function runTest() {
   const driver = await remote(wdOpts);
 
   try {
-    await driver.navigateTo('https://tvlabs.ai/')
+    await driver.navigateTo('https://tvlabs.ai/');
   } finally {
     await driver.pause(3000);
     await driver.deleteSession();

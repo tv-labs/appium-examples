@@ -2,14 +2,23 @@ import { remote } from 'webdriverio';
 import fs from 'fs';
 
 const capabilities = {
-  'tvlabs:filter': 'B',
-  'appium:app': '/home/appium/server/apps/roku.zip', // Optional: Include to sideload a dev channel
+  // 'tvlabs:host': 'tv-1422823033610.tail23398.ts.net',
+  'tvlabs:constraints': {
+    make: 'roku',
+    model: 'Express4K',
+    // year: '2023',
+  },
+  // Optional: Include to sideload a dev channel
+  'appium:app': '/home/appium/server/apps/roku.zip',
 };
 
 const wdOpts = {
   hostname: 'localhost',
   port: 4723, // Appium proxy
   logLevel: 'info',
+  headers: {
+    Authorization: 'Bearer tv-DPhCUQxw1XadtCDAGrPmucKNrwdbpn4owiAq0Q5DgaQ',
+  },
   capabilities,
 };
 
