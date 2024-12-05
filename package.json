@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "node test.js",
     "roku": "node test-roku.js",
     "webos": "node test-webos.js",
-    "start": "nodemon proxy.js"
+    "format": "prettier --write ."
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "description": "",
   "dependencies": {
-    "nodemon": "^3.1.7",
+    "dotenv": "^16.4.7",
     "webdriverio": "^8.40"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
   },
   "engines": {
     "node": ">=22"
