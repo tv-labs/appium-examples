@@ -1,0 +1,21 @@
+{
+  "name": "appium-examples",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "roku": "node test-roku.js",
+    "webos": "node test-webos.js",
+    "start": "nodemon proxy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "webdriverio": "^8.40"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
