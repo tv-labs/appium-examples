@@ -32,11 +32,14 @@ async function runTest() {
     // await driver.pause(5000);
 
     await driver.executeScript('webos: pressKey', [{ key: 'up' }]);
-    await driver.pause(1000);
+    await driver.pause(500);
     await driver.executeScript('webos: pressKey', [{ key: 'down' }]);
-    await driver.pause(1000);
+    await driver.pause(500);
     await driver.executeScript('webos: pressKey', [{ key: 'down' }]);
-    await driver.pause(1000);
+    await driver.pause(500);
+
+    const appInfo = await driver.executeScript('webos: activeAppInfo', []);
+    console.log('appInfo', appInfo);
   } finally {
     await driver.pause(1000);
     await driver.deleteSession();
