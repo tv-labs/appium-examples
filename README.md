@@ -1,11 +1,11 @@
-# TVLabs Appium Examples
+# TV Labs Appium Examples
 
-This repository contains example scripts demonstrating how to use Appium with the TVLabs platform for automated testing on various TV platforms.
+This repository contains example scripts demonstrating how to use Appium with the TV Labs platform for automated testing on various TV platforms.
 
 ## Prerequisites
 
 - Node.js >= 22
-- A TVLabs account and API key
+- A TV Labs account and API key
 - npm or yarn
 
 ## Setup
@@ -23,7 +23,7 @@ cd appium-examples
 npm install
 ```
 
-3. Create a `.env` file in the root directory and add your TVLabs API key:
+3. Create a `.env` file in the root directory and add your TV Labs API key:
 
 ```bash
 TVLABS_API_TOKEN=your_api_token_here
@@ -58,7 +58,7 @@ npm run webos
 The Roku example (`test-roku.js`) demonstrates:
 
 - Basic remote control operations
-- Taking screenshots (dev channel only)
+- Taking screenshots
 - Getting device information
 - Sideloading a dev channel (optional)
 
@@ -71,7 +71,7 @@ The webOS example (`test-webos.js`) shows:
 
 ## Device Constraints
 
-TVLabs uses a constraint system to specify which device to use for testing. You can set various constraints in the capabilities object:
+TV Labs uses a constraint system to specify which device to use for testing. You can set various constraints in the capabilities object:
 
 ```javascript
 const capabilities = {
@@ -94,7 +94,7 @@ The platform will automatically select an available device that matches your con
 
 ## WebDriverIO Configuration
 
-The examples use WebDriverIO to connect to the TVLabs Appium server:
+The examples use WebDriverIO to connect to the TV Labs Appium server:
 
 ```javascript
 const wdOpts = {
@@ -124,8 +124,7 @@ await driver.executeScript('webos: pressKey', [{ key: 'down' }]);
 
 - Screenshots are only available in the Roku dev channel
 - Always remember to clean up your session using `driver.deleteSession()`
-- Add pauses between actions to allow for UI updates and animations
-- The TVLabs platform handles device allocation based on your constraints
+- The TV Labs platform handles device allocation based on your constraints
 
 ## License
 
