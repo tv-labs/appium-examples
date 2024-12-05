@@ -1,5 +1,6 @@
 import { remote } from 'webdriverio';
 import fs from 'fs';
+import dotenv from 'dotenv';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -9,6 +10,7 @@ const capabilities = {
   'tvlabs:constraints': {
     make: 'roku',
     model: 'Express4K',
+    platform: 'roku',
     // year: '2023',
   },
   // Optional: Include to sideload a dev channel
