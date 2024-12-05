@@ -6,11 +6,12 @@ dotenv.config();
 
 const capabilities = {
   'tvlabs:constraints': {
-    make: 'webos',
-    model: 'webos',
+    make: 'LG',
+    model: 'C4AUA',
     platform: 'webos',
-    platformVersion: '10.0',
   },
+  // Include to sideload a dev channel (required)
+  'appium:app': '/home/appium/server/apps/webos.ipk',
 };
 
 const wdOpts = {
@@ -37,9 +38,7 @@ async function runTest() {
     await driver.pause(500);
     await driver.executeScript('webos: pressKey', [{ key: 'down' }]);
     await driver.pause(500);
-
-    const appInfo = await driver.executeScript('webos: activeAppInfo', []);
-    console.log('appInfo', appInfo);
+    await driver.executeScript('webos: activeAppInfo', []);
   } finally {
     await driver.pause(1000);
     await driver.deleteSession();
