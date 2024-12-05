@@ -1,6 +1,9 @@
 import { remote } from 'webdriverio';
 import fs from 'fs';
 
+// Load environment variables from .env file
+dotenv.config();
+
 const capabilities = {
   // 'tvlabs:host': 'tv-1422823033610.tail23398.ts.net',
   'tvlabs:constraints': {
@@ -13,12 +16,12 @@ const capabilities = {
 };
 
 const wdOpts = {
-  hostname: 'localhost',
-  port: 4723, // Appium proxy
-  logLevel: 'info',
+  hostname: 'appium.tvlabs.ai',
+  port: 4723,
   headers: {
-    Authorization: 'Bearer tv-DPhCUQxw1XadtCDAGrPmucKNrwdbpn4owiAq0Q5DgaQ',
+    Authorization: `Bearer ${process.env.TVLABS_API_TOKEN}`,
   },
+  logLevel: 'info',
   capabilities,
 };
 

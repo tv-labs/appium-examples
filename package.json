@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "local": "node test-local-safari.js",
     "roku": "node test-roku.js",
     "webos": "node test-webos.js",
     "format": "prettier --write ."
@@ -12,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "webdriverio": "^8.40"
   },
   "devDependencies": {
