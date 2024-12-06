@@ -8,13 +8,14 @@ const capabilities = {
   'tvlabs:constraints': {
     make: 'LG',
     model: 'C4AUA',
-    platform: 'webos',
+    platform_key: 'webos',
   },
   // Include to sideload a dev channel (required)
   'appium:app': '/home/appium/server/apps/webos.ipk',
 };
 
 const wdOpts = {
+  protocol: 'https',
   hostname: 'appium.tvlabs.ai',
   port: 4723,
   headers: {

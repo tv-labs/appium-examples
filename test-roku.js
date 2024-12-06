@@ -8,9 +8,9 @@ dotenv.config();
 const capabilities = {
   // 'tvlabs:host': 'tv-1422823033610.tail23398.ts.net',
   'tvlabs:constraints': {
-    make: 'roku',
-    model: 'Express4K',
-    platform: 'roku',
+    // make: 'roku',
+    // model: 'Express4K',
+    platform_key: 'roku',
     // year: '2023',
   },
   // Optional: Include to sideload a dev channel
@@ -18,6 +18,7 @@ const capabilities = {
 };
 
 const wdOpts = {
+  protocol: 'https',
   hostname: 'appium.tvlabs.ai',
   port: 4723,
   headers: {
