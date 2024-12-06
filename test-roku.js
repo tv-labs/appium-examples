@@ -2,11 +2,10 @@ import { remote } from 'webdriverio';
 import fs from 'fs';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
 dotenv.config();
 
 const capabilities = {
-  // 'tvlabs:host': 'tv-1422823033610.tail23398.ts.net',
+  // 'tvlabs:host': 'stb-1422324336997.tail23398.ts.net', // B
   'tvlabs:constraints': {
     // make: 'roku',
     // model: 'Express4K',

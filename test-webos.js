@@ -1,10 +1,10 @@
 import { remote } from 'webdriverio';
 import dotenv from 'dotenv';
 
-// Load environment variables from .env file
 dotenv.config();
 
 const capabilities = {
+  // 'tvlabs:host': 'tv-1420923016633.tail23398.ts.net,
   'tvlabs:constraints': {
     make: 'LG',
     model: 'C4AUA',
