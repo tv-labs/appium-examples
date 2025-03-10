@@ -12,7 +12,7 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "webdriverio": "^8.40"
+    "webdriverio": "^9.11.0"
   },
   "devDependencies": {
     "prettier": "3.4.2"
